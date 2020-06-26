@@ -316,9 +316,9 @@ def detect_image(net, meta, im, thresh=.5, hier_thresh=.5, nms=.45, debug=False)
     free_detections(dets, num)
     if debug:
         print("freed detections")
-    free_image(im)
-    if debug:
-        print("freed im")
+    # free_image(im)    
+    # if debug:
+    #     print("freed im")
     return res
 
 
@@ -327,7 +327,7 @@ metaMain = None
 altNames = None
 
 
-def performDetect(imageContent, thresh=0.25, configPath="./cfg/yolov4.cfg", weightPath="yolov4.weights", metaPath="./cfg/coco.data", showImage=False, makeImageOnly=False, initOnly=False):
+def performDetect(imageContent, thresh=0.25, configPath="./cfg/yolov3-openimages.cfg", weightPath="./yolov3-openimages.weights", metaPath="./cfg/openimages.data", showImage=False, makeImageOnly=False, initOnly=False):
     """
     Convenience function to handle the detection and returns of objects.
 
