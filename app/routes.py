@@ -8,7 +8,6 @@ from cv2 import *
 def index():
     return "Hello, YOLO!"
 
-
 @app.route('/yolov4/detections',  methods=['POST'])
 def detecting():
     user_name = request.form.get('user-name')
@@ -20,12 +19,12 @@ def detecting():
     # convert numpy array to image
     img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
     # get bounding box
-    boudingbox = performDetect(imageContent=img)
+    boundingbox = performDetect(imageContent=img)
 
     response_body = {
         "user-name": user_name,
         "image-name": image_name,
-        "boudingbox": boudingbox
+        "boundingbox": boundingbox
     }
 
     res = make_response(jsonify(response_body), 201)
