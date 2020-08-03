@@ -20,11 +20,11 @@ This is a service of [FastDrive Project](https://github.com/xuan-vy-nguyen/FastD
 - If you want to run API server, do ``` ./server.bash ```.
 - The format of package which is sent do server:
 * form-data *
-| Key | Value | Type |
-| --- | ----------- | ---|
-| image-name | abc.* | text |
-| user-name | xuvy-ng | text |
-| image | img.* | file |
+| Key        | Value   | Type |
+| :---       | :---:   | ---: |
+| image-name | abc.*   | text |
+| user-name  | xuvy-ng | text |
+| image      | img.*   | file |
 - The format of package which you can receive from server:
 * json-format *
 {
