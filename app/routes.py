@@ -1,12 +1,13 @@
 from app import app
-from flask import jsonify, make_response, request
+from flask import jsonify, make_response, request, render_template
 from detector import performDetect
 import numpy as np
 from cv2 import *
+import os
 
 @app.route('/yolov4')
 def index():
-    return "Hello, YOLO!"
+    return render_template('homepage.html')
 
 @app.route('/yolov4/detections',  methods=['POST'])
 def detecting():
