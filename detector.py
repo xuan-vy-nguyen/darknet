@@ -327,7 +327,7 @@ metaMain = None
 altNames = None
 
 
-def performDetect(imageContent, thresh=0.25, configPath="./cfg/yolov3-openimages.cfg", weightPath="./yolov3-openimages.weights", metaPath="./cfg/openimages.data", showImage=True, makeImageOnly=False, initOnly=False):
+def performDetect(imageContent, thresh=0.4, configPath="./cfg/yolov3-openimages.cfg", weightPath="./yolov3-openimages.weights", metaPath="./cfg/openimages.data", showImage=True, makeImageOnly=False, initOnly=False):
     """
     Convenience function to handle the detection and returns of objects.
 
